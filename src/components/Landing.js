@@ -8,7 +8,7 @@ class Landing extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            landing: 'main'
+            landing: 'auto'
   }
     }
     choice=(e)=>{

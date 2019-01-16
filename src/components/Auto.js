@@ -1,32 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import Cast from './Cast';
+import Story from './Story';
 class Auto extends React.Component{
     constructor(props){
         super(props)
     }   
-    story = () => {
-    let verb_array = ['a verb', 'b verb', 'c verb', 'd verb', 'e verb', 'f verb'];
-    let adjective_array = ['a adj', 'b adj', 'c adj', 'd adj', 'e adj', 'f adj'];
-    let noun_array = ['a noun', 'b noun', 'c noun', 'd noun', 'e noun', 'f noun'];
-let all = []
-        let verb = Math.floor(Math.random() * 5);   
-        let noun = Math.floor(Math.random() * 5);   
-        let adjective = Math.floor(Math.random() * 5);   
-        
-        all.push(verb_array[verb]);
-        all.push(adjective_array[adjective]);
-        all.push(noun_array[noun]);
 
-        console.log(all[0] + ' ' + all[1] + ' ' + all[2]);
-    }
     render(){
     return(
 <section className='auto_holder' >
-         <button onClick= {e =>this.props.choice('main')}>Back</button>
-         <button onClick= {this.story}>Auto</button>
+<Story />        
+<Cast />
+
+         <button onClick= {e =>this.props.choice('main')} className='back_button'>Back</button>
+         
 </section>
           
     );}
 }
     export default Auto;
+
+    // <button onClick= {this.story} className=''>Auto</button>
+
+    // actresses: Jessica Lowndes; Maddie McCormack; Elaine Hendricks; Danielle Panabaker; Lucia Walters; Shannon Chan-Kent
+    // Taylot Hastings; Jessy Schram; Rebekah Asselstine; Allisson Amigo;
+    // actors: Michael Rady; Cole Gleason; Ben Estus; Matt Long; Michael Brian; Chad Michael Murray; Jeff Gonek; Cardi Wong; Mat Lo; 
+    // angel people: Steve Larkin; Beverley Elliot; Gabrielle Rose; BJ Harrison;

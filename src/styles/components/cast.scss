@@ -1,0 +1,20 @@
+.actor_image{
+    grid-column: 2/3;
+}
+.actress_image{
+
+    grid-column: 3/4;
+
+}
+.angel_image{
+
+    grid-column: 4/5;
+    
+    
+}
+
+.image{
+    height: 200px;
+    width: auto;
+    grid-row: 1/-1;
+}

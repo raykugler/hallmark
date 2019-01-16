@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import Main from './components/Main';
+import data from './components/data';
 ReactDOM.render(<Main />, document.getElementById('app'));
 
 
