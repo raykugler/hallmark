@@ -1,5 +1,7 @@
 
-let intros = ['As Christmas approaches ', 'After a divorce, ', ''];
+
+
+let intros = ['As Christmas approaches', 'After a divorce', ''];
 
 let profession = ['market researcher ','TV producer ','interim school superintendent ','music teacher', 'event planner', 'IT guy', 
                   'aspiring crafter ','big city new CEO ', 'Chicago-based business executive', 'professional retail designer', 'local music promoter',
@@ -8,9 +10,20 @@ let profession = ['market researcher ','TV producer ','interim school superinten
 
 let female_names =['Joy Holbrook ', 'Eve ', 'Ellie Hartman ','Laurel ', 'Lisa ','Samantha ','Katie ','Darcy ','Stacy ','Laurel Welk ','Ellie Hamilton ',
                     'Jennie'];
-let male_names = ['Liam ', 'Nick Carlingson ','Clay ','Kevin ',]
+let male_names = ['Liam ', 'Nick Carlingson ','Clay ','Kevin ','Danny Holland'];
 
+let adjectives = ['adventurous', 'difficult', 'angry', 'expensive', 'cheap','jealous','lonely','lively','energetic','tired','thankful','funny','gifted',
+                'cute','curious','crazy','creepy','clever','beautiful','graceful','plain','happy','poor','shy','average','attractive','arrogant','evil',
+                'fancy','lonely','lucky','busy','careful','cautious','gifted','old-fashioned','vivacious','proud','nervous','obnoxious','curious',
+                'gorgeous','perfect','powerful','healthy','helpful','handsome','cute','dark'];
+let verbs = ['goes', 'takes','comes','wants','thinks','gives','asks','leaves','tries','works','calls','eats','opens','pushes','plays','sends','sings',
+            'smiles','grabs','hops','shops','smiles','thinks','listens','jumps','laughs','shouts','talks','reads','rides','touches','buys',
+            'cries','helps','bakes','hits','exits','spends','stands','visits','waits','walks','dreams','drinks','builds','goes','falls','yells',
+            'sings','opens','helps','writes','votes','enters','exits','helps','leaves','listens','reads','rides','moves','sits'];
 
+let all_cat = [intros, profession,female_names,male_names,adjectives, verbs];
+
+export default all_cat;
 // , an  is sent to a small town to organize a festival but finds a billionaire in the process of selling the estate she hoped to use as a venue. Before long, the unlikely pair begins falling for each other.
 
 
