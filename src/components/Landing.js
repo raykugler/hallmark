@@ -8,7 +8,7 @@ class Landing extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            landing: 'auto'
+            landing: 'main'
   }
     }
     choice=(e)=>{
@@ -42,12 +42,16 @@ class Landing extends React.Component{
         )}
     else if (this.state.landing === 'madlib'){
         return(
-            <Madlib choice = {this.choice}/>
+            <Madlib choice = {this.choice}
+            landing={this.state.landing}
+            />
         )
     }
     else if (this.state.landing === 'auto'){
         return(
-            <Auto choice = {this.choice}/>
+            <Auto choice = {this.choice}
+            landing={this.state.landing}
+            />
         )
     }
     

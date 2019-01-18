@@ -4,7 +4,7 @@
     background-color:white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 200px 1fr 1fr;
 }
 
 .back_button{
@@ -21,7 +21,7 @@
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 .fill_button{
     grid-row: 1/-1;

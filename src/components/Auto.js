@@ -10,8 +10,8 @@ class Auto extends React.Component{
     render(){
     return(
 <section className='auto_holder' >
-<Story />        
-<Cast />
+<Story landing={this.props.landing} />        
+
 
          <button onClick= {e =>this.props.choice('main')} className='back_button'>Back</button>
          

@@ -9,8 +9,11 @@ class Cast extends React.Component{
         super(props)
         this.state = { data: [],  
                  actress_image: '' ,
+                 actress_name: '' ,
                  actor_image: '', 
-                 angel_image:''
+                 actor_name: '' ,
+                 angel_image:'',
+                 angel_name:'',
                 
         };
     }   
@@ -31,13 +34,15 @@ async fill_call()  {
     const actressjsonData = await actressResponse.json();
 
     this.setState({ actress_image: actressjsonData[0].person.image.medium  });
+    this.setState({ actress_name: actressjsonData[0].person.name  });
     const URL_two = `http://api.tvmaze.com/search/people?q=${actor}`;
 
     const fetchActorResult = await fetch(URL_two);
     const actorResponse = await fetchActorResult;
     const actorjsonData = await actorResponse.json();
-    console.log(actor);
+    console.log(actorjsonData);
     this.setState({ actor_image: actorjsonData[0].person.image.medium  });
+    this.setState({ actor_name: actorjsonData[0].person.name });
 
     const URL_three = `http://api.tvmaze.com/search/people?q=${angel}`;
 
@@ -46,8 +51,8 @@ async fill_call()  {
     const angeljsonData = await angelResponse.json();
     console.log(actor);
     this.setState({ angel_image: angeljsonData[0].person.image.medium  });
-
-   
+    this.setState({ angel_name: angeljsonData[0].person.name});
+       console.log(this.props.names);
     
 }
 
@@ -55,8 +60,13 @@ async fill_call()  {
     return(
         <section className='actor_holder'>        
         <img src={this.state.actress_image} className='actress_image image'/>
+        <p className='actress_name'>{this.state.actress_name} <br/> as <br/> {this.props.names[0]}  </p>
+        
+
         <img src={this.state.actor_image} className='actor_image image'/>
+        <p className='actor_name'>{this.state.actor_name}<br/> as <br/> {this.props.names[1]}</p>
         <img src={this.state.angel_image} className='angel_image image'/>
+        <p className='angel_name'>{this.state.angel_name} <br/> as <br/> {this.props.names[2]}</p>
         </section>
 
          
