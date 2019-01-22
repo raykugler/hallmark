@@ -9,9 +9,12 @@ let profession = ['market researcher ','TV producer ','interim school superinten
                   'local contractor ','novelist ','former professional ice skater ','tavern owner ', 'sous chef ','out of work aspiring fashion designer ',
                   'personal assistant ', 'superstar quarterback ', 'party planner ','successful matchmaker ','struggling writer '];
 
-let female_names =['Joy Holbrook ', 'Eve ', 'Ellie Hartman ','Laurel ', 'Lisa ','Samantha ','Katie ','Darcy ','Stacy ','Laurel Welk ','Ellie Hamilton ',
-                    'Jennie'];
-let male_names = ['Liam ', 'Nick Carlingson ','Clay ','Kevin ','Danny Holland'];
+let female_names =['Joy', 'Eve', 'Ellie','Laurel', 'Lisa','Samantha','Katie','Darcy','Stacy','Ellie', 'Heather','Emma',
+'Olivia','Ava','Isabella','Sophia','Mia','Charlotte','Amelia','Evelyn','Abigail','Harper','Emily','Elizabeth','Avery','Sofia','Ella','Madison',
+'Scarlett','Victoria','Aria','Grace','Chloe','Camila','Penelope','Riley','Layla','Lillian','Nora','Zoey','Mila','Aubrey','Hannah','Lily',
+'Addison','Eleanor','Natalie','Luna','Savannah','Brooklyn','Leah','Zoe','Stella','Hazel','Ellie','Paisley','Audrey','Skylar','Violet','Claire',
+'Bella','Aurora','Lucy','Anna','Samantha','Caroline','Aaliyah','Kennedy','Kinsley','Allison','Maya','Sarah','Madelyn','Jennie'];
+let male_names = ['Liam', 'Nick','Clay','Kevin','Danny'];
 
 let adjectives = ['adventurous', 'difficult', 'angry', 'expensive', 'cheap','jealous','lonely','lively','energetic','tired','thankful','funny','gifted',
                 'cute','curious','crazy','creepy','clever','beautiful','graceful','plain','happy','poor','shy','average','attractive','arrogant','evil',
@@ -30,7 +33,8 @@ let happening = ['is sent to a small town to organize a festival', 'is about to 
                 'returns to her hometown to spend the summer with her daughter and mother',"she signs up for the town's annual barbecue competition",
                 'has suddenly lost the spark in her own marriage','is forced to fake a relationship to save her career']; 
  
-let buts = ['finds a billionaire in the process','she receives an urgent phone call from home and rushes back to help her Aunt recover from surgery',
+let buts = ['finds a billionaire in the process','she receives an urgent phone call from home and rushes back to help her Aunt recover from surgery', 'a meteor strikes the earth',
+            'a transit strike ruins her plans', 'she discovers she has a long lost twin', 'a snowstorm strands her at the airport'
             ]                
 let vague_words = ['vaguely', 'obscurely','indistinctly', 'darkly','remarkably','dimly', 'slightly', 'barely','impalpably','hazily']
 

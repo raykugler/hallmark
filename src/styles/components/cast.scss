@@ -24,7 +24,13 @@
 }
 
 .image{
-    height: 200px;
+    height: 150px;
     width: auto;
+    justify-self: center;
     grid-row: 1/-1;
+    border-style: groove;
+}
+.cast{
+    line-height: 17px;
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
 }

@@ -6,7 +6,8 @@ class The_Form extends React.Component{
         super(props)
         
     }   
-    
+
+
 //    make_story=(event)=>{
        
 //        let form_array = [];
@@ -27,44 +28,56 @@ class The_Form extends React.Component{
 
     render(){
     return(
-<section className='madlib_holder' >
 
-<form>
-  <label>
-    Woman's Name:
-    <input type="text" name="womans_name" id='female_name' value="Jill"/>
-  </label>
-  <label>
-  Man's Name:
-  <input type="text" name="mans_name" id='male_name' value="Bob"/>
-</label>
-<label>
-Adjective:
-<input type="text" name="adj_one" id='adjective_one' value="Red"/>
-</label>
-<label>
-Profession:
-<input type="text" name="job_one" id='job_one' value="builder"/>
-</label>
-<label>
-Adjective:
-<input type="text" name="adj_two" id='adjective_two' value='blue'/>
-</label>
-<label>
-Nationality/Ethnicity:
-<input type="text" name="nationality" id='nation' value='Romanian'/>
-</label>
-<label>
-Profession:
-<input type="text" name="job_two" id='job_two' value="Tax preparer"/>
-</label>
-<label>
-Mythical Creature:
-<input type="text" name="myth" id='myth' value="Unicorn"/>
-</label>
-  <input type="button" value="Submit" onClick={this.props.make_story}/>
-</form>
-</section>
+<form className='form'>
+    <label className='inputs'>
+    <p className='input_title'>Woman's Name:</p>
+    <input type="text" name="womans_name" id='female_name' className='field' />
+    <img src='/images/again.png' className='autofill_image' onClick={e => this.props.fill_for_me('female_name')}/>
+    </label>
+
+    <label className='inputs'>
+    <p className='input_title'>Man's Name:</p>
+    <input type="text" name="mans_name" id='male_name' className='field' />
+    <img src='/images/again.png' className='autofill_image' onClick={e => this.props.fill_for_me('male_name')}/>
+    </label>
+
+    <label className='inputs'>
+        <p className='input_title'>Adjective:</p>
+        <input type="text" name="adj_one" id='adjective_one' className='field' value=''/>
+        <img src='/images/again.png' className='autofill_image' onClick={e => this.props.fill_for_me('adjective_one')}/>
+    </label>
+
+    <label className='inputs'>
+        <p className='input_title'>Profession:</p>
+        <input type="text" name="job_one" id='job_one' className='field'/>
+        <img src='/images/again.png' className='autofill_image' onClick={e => this.props.fill_for_me('job_one')}/>
+    </label>
+
+    <label className='inputs'>
+        <p className='input_title'>Adjective:</p>
+        <input type="text" name="adj_two" id='adjective_two' className='field'/>
+        <img src='/images/again.png' className='autofill_image' onClick={e => this.props.fill_for_me('adjective_two')}/>
+    </label>
+    <label className='inputs'>
+        <p className='input_title'>Nationality/Ethnicity:</p>
+        <input type="text" name="nationality" id='nation' className='field'/>
+        <img src='/images/again.png' className='autofill_image' onClick={e => this.props.fill_for_me('nation')}/>
+    </label>
+    <label className='inputs'>
+        <p className='input_title'>Profession:</p>
+        <input type="text" name="job_two" id='job_two' className='field'/>
+        <img src='/images/again.png' className='autofill_image' onClick={e => this.props.fill_for_me('job_two')}/>
+    </label>
+    <label className='inputs'>
+        <p className='input_title'>Mythical Creature:</p>
+        <input type="text" name="myth" id='myth' className='field'/>
+        <img src='/images/again.png' className='autofill_image' onClick={e => this.props.fill_for_me('myth')}/>
+    </label>
+  <input type="button" value="Generate Plot" className='submit_button' onClick={this.props.make_story}/>
+  <button onClick= {e =>this.props.choice('main')} className='form_back_button'><img src='/images/book_two.png' className='form_again_image' />Home</button>
+  </form>
+
           
     );}
 }

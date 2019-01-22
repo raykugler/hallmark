@@ -1,9 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-const actress_image_array = ['jessica-lowndes', 'elaine-hendricks', 'danielle-panabaker', 'lucia-walters', 'shannon-chan-kent', 'taylor-hastings', 'jessy-schram'];
-const actor_image_array = ['michael-rady', 'matt-long', 'michael-brian', 'chad-michael-murray', 'cardi-wong', 'mat-lo'];
-const angel_image_array = ['steve-larkin', 'beverley-elliot', 'gabrielle-rose', 'bj-harrison'];
-
+const actress_image_array = ['jessica-lowndes', 'elaine-hendricks', 'danielle-panabaker', 'lucia-walters', 'shannon-chan-kent', 'taylor-hastings','taylor-cole', 
+                            'jessy-schram','katrina-bowden', 'rachael-leigh-cook','kristy-swanson','lacey-chabert', 'gabrielle-rose','danica-mckellar',
+                            'josie-bissett','ali-liebert','cindy-busby', 'amanda-schull','vanessa-bell-calloway', 'julie-gonzalo','bethany-joy-lenz','brittany-bristow',
+                            'poppy-drayton','minka-kelly','megan-park', 'makenzie-vega','fiona-gubelmann','cindy-busby','pascale-hutton','josie-bissett','jen-lilley',
+                            'catherine-bell','alexa-penavega','jill-wagner', 'autumn-reeser', 'debbie-gibson','nikki-deloach','lindy-booth', 'kelly-rutherford','leann-rimes', 
+                            ' kellie-pickler','merritt-patterson'
+                            ];
+const actor_image_array = ['michael-rady', 'matt-long', 'michael-brian', 'chad-michael-murray', 'cardi-wong', 'mat-lo','niall-matter','dean-cain','andrew-w-walker',
+                        'cameron-mathison','damon-runyan','brett-dalton','jack-wagner', 'andrew-cooper','peter-porte','chris-mcnally', 'will-kemp', 'steven-r-mcqueen',
+                        'jonathan-keltz', 'torrance-coombs','ryan-paevey','kavan-smith', 'marcus-rosner','jon-cor', 'carlos-penavega','kristoffer-polaha', 'marc-blucas', 
+                         'robert-gant', 'dylan-neal','brennan-elliott','tyler-hynes','wes-brown','cameron-mathison', 'james-denton','bailee-madison', 'daniel-lissing'
+                        ];
+const angel_image_array = ['steve-larkin',  'bj-harrison','kix-brooks','james-brolin','andie-macdowell','venus-terzo', 'gail-ogrady', 'samantha-bond', 'bruce-davison', 'lini-evans', 'peri-gilpin', 'gary-perterman', 'richard-riehle', 
+'barbara-niven', 'dolores-drake', 'timothy-webber', 'sean-campbell','malcolm-stewart', 'teryl-rothery', 'tosca-baggoo', 'patrick-duffy'];
+const test_array = [];
+// 'thomas-beaudoin','becca-tobin''jack-turner',
 class Cast extends React.Component{
     constructor(props){
         super(props)
@@ -19,13 +31,14 @@ class Cast extends React.Component{
     }   
 componentDidMount(){
     this.fill_call();
+    console.log(angel_image_array.length)
 }
 async fill_call()  {
-    let actress_select = Math.floor(Math.random() * 5);
+    let actress_select = Math.floor(Math.random() * 43);
     let actress = actress_image_array[actress_select];
-    let actor_select = Math.floor(Math.random() * 6);
+    let actor_select = Math.floor(Math.random() * 36);
     let actor = actor_image_array[actor_select];
-    let angel_select = Math.floor(Math.random() * 4);
+    let angel_select = Math.floor(Math.random() * 21);
     let angel = angel_image_array[angel_select];
     const URL = `http://api.tvmaze.com/search/people?q=${actress}`;
     
@@ -55,18 +68,37 @@ async fill_call()  {
        console.log(this.props.names);
     
 }
+async image_test(){
+    let display = document.getElementById('display');
+     for (let i = 0; i< test_array.length; i++){
+        let this_image = test_array[i];
+        const URL_three = `http://api.tvmaze.com/search/people?q=${this_image}`;
+        let image_frame = document.createElement('IMG');
+        let text_frame = document.createElement('P');
+        
+
+    const fetchAngelResult = await fetch(URL_three);
+    const angelResponse = await fetchAngelResult;
+    const testjsonData = await angelResponse.json();
+    image_frame.src = testjsonData[0].person.image.medium
+    // let text_node = document.createElement( testjsonData[0].person.name);
+    // text_frame.appendChild(text_node);
+    // display.appendChild(text_frame);
+    display.appendChild(image_frame);
+  }
+}
 
     render(){
     return(
-        <section className='actor_holder'>        
+        <section className='actor_holder' id='display'>        
         <img src={this.state.actress_image} className='actress_image image'/>
-        <p className='actress_name'>{this.state.actress_name} <br/> as <br/> {this.props.names[0]}  </p>
+        <p className='actress_name cast'>{this.state.actress_name} <br/> as <br/> {this.props.names[0]}  </p>
         
 
         <img src={this.state.actor_image} className='actor_image image'/>
-        <p className='actor_name'>{this.state.actor_name}<br/> as <br/> {this.props.names[1]}</p>
+        <p className='actor_name cast'>{this.state.actor_name}<br/> as <br/> {this.props.names[1]}</p>
         <img src={this.state.angel_image} className='angel_image image'/>
-        <p className='angel_name'>{this.state.angel_name} <br/> as <br/> {this.props.names[2]}</p>
+        <p className='angel_name cast'>{this.state.angel_name} <br/> as <br/> {this.props.names[2]}</p>
         </section>
 
          
@@ -77,3 +109,4 @@ async fill_call()  {
     export default Cast;
 
     // <button onClick={e => this.fill_call()} className='fill_button'>Fill Call</button>
+   

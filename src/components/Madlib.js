@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import The_Form from './The_Form';
 import Story from './Story';
+import all_cat from './data';
 
 class Madlib extends React.Component{
     constructor(props){
@@ -21,6 +22,55 @@ class Madlib extends React.Component{
         console.log(this.state.landing + 'lllllll');
        
     }
+fill_for_me=(e)=>{
+        let field_choice = document.getElementById(e);
+        let field_id =field_choice.id;
+if (field_id === 'female_name'){
+    let number_choice = Math.floor(Math.random() * all_cat[2].length)
+    let fill_word = all_cat[2][number_choice];
+    document.getElementById(e).value= fill_word;
+}
+else if (field_id === 'male_name'){
+    let number_choice = Math.floor(Math.random() * all_cat[3].length)
+    let fill_word = all_cat[3][number_choice];
+    document.getElementById(e).value= fill_word;
+}
+
+else if(field_id === 'adjective_one'){
+    let number_choice = Math.floor(Math.random() * all_cat[4].length)
+    let fill_word = all_cat[4][number_choice];
+    document.getElementById(e).value= fill_word;
+}
+else if(field_id === 'job_one'){
+    let number_choice = Math.floor(Math.random() * all_cat[1].length)
+    let fill_word = all_cat[1][number_choice];
+    document.getElementById(e).value= fill_word;
+
+}
+else if(field_id === 'adjective_two'){
+    let number_choice = Math.floor(Math.random() * all_cat[4].length)
+    let fill_word = all_cat[4][number_choice];
+    document.getElementById(e).value= fill_word;
+}
+else if(field_id === 'nation'){
+    let number_choice = Math.floor(Math.random() * all_cat[10].length)
+    let fill_word = all_cat[10][number_choice];
+    document.getElementById(e).value= fill_word;
+
+}        
+else if(field_id === 'job_two'){
+    let number_choice = Math.floor(Math.random() * all_cat[1].length)
+    let fill_word = all_cat[1][number_choice];
+    document.getElementById(e).value= fill_word;
+}
+else if(field_id === 'myth'){
+    let number_choice = Math.floor(Math.random() * all_cat[9].length)
+    let fill_word = all_cat[9][number_choice];
+    document.getElementById(e).value= fill_word;
+
+}
+
+    }
    make_story=(event)=>{
        
        let form_array = [];
@@ -38,16 +88,16 @@ class Madlib extends React.Component{
         this.fill_choice('after_select');
         
     }
-    log=()=>{
-        console.log(this.state.story_fact_array);
-    }
+  
 
     render(){
         if(this.state.show === 'form'){
             return(
                 <section className='madlib_holder' >
                     <The_Form fill_choice={this.fill_choice}
-                                make_story={this.make_story}/>
+                                make_story={this.make_story}
+                                fill_for_me={this.fill_for_me}
+                                choice={this.props.choice}/>
                 </section>
             )}
 
@@ -56,7 +106,8 @@ class Madlib extends React.Component{
                 <section className='madlib_holder' >
                     <Story fill_choice={this.fill_choice}
                     landing={this.props.landing}
-                    story_fact_array={this.state.story_fact_array}/>
+                    story_fact_array={this.state.story_fact_array}
+                    choice={this.props.choice}/>
                    
                 </section>
 )}
@@ -64,35 +115,5 @@ class Madlib extends React.Component{
 }
     export default Madlib;
 
-    // <button onClick= {e =>this.props.choice('main')}>Back
     
-    
-    
-    
-    
-    //     if(this.state.mode === 'view') {
-    //       return (
-    //         <div>
-    //           <p>Text: {this.state.text}</p>
-    //           <button onClick={this.handleEdit}>
-    //             Edit
-    //           </button>
-    //         </div>
-    //       );
-    //     } else {
-    //       return (
-    //         <div>
-    //           <p>Text: {this.state.text}</p>
-    //             <input
-    //               onChange={this.handleChange}
-    //               value={this.state.inputText}
-    //             />
-    //           <button onClick={this.handleSave}>
-    //             Save
-    //           </button>
-    //         </div>
-    //       );
-    //     }
-    //   }
-    // }
-    
+  
