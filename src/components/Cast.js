@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 const actress_image_array = ['jessica-lowndes', 'elaine-hendricks', 'danielle-panabaker', 'lucia-walters', 'shannon-chan-kent', 'taylor-hastings','taylor-cole', 
-                            'jessy-schram','katrina-bowden', 'rachael-leigh-cook','kristy-swanson','lacey-chabert', 'gabrielle-rose','danica-mckellar',
+                            'jessy-schram','katrina-bowden', 'rachael-leigh-cook','kristy-swanson','lacey-chabert','danica-mckellar',
                             'josie-bissett','ali-liebert','cindy-busby', 'amanda-schull','vanessa-bell-calloway', 'julie-gonzalo','bethany-joy-lenz','brittany-bristow',
                             'poppy-drayton','minka-kelly','megan-park', 'makenzie-vega','fiona-gubelmann','cindy-busby','pascale-hutton','josie-bissett','jen-lilley',
                             'catherine-bell','alexa-penavega','jill-wagner', 'autumn-reeser', 'debbie-gibson','nikki-deloach','lindy-booth', 'kelly-rutherford','leann-rimes', 
@@ -34,7 +34,7 @@ componentDidMount(){
     console.log(angel_image_array.length)
 }
 async fill_call()  {
-    let actress_select = Math.floor(Math.random() * 43);
+    let actress_select = Math.floor(Math.random() * 41);
     let actress = actress_image_array[actress_select];
     let actor_select = Math.floor(Math.random() * 36);
     let actor = actor_image_array[actor_select];

@@ -8,3 +8,14 @@
 
 
 
+@media only screen and (max-width: 1000px) {
+    .madlib_holder{
+        grid-column: 1/-1;
+        grid-row: 2/6;
+        margin-top: 20px;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}

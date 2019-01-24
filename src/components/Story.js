@@ -10,6 +10,7 @@ const title_one = [	'Love Frozen', 'One Winter',"Winter's", 'My Secret', 'Very, 
 const title_two = ['on the Slopes', 'Love', 'Dream','Weekend','Valentine','March', 'Hearts',',Once and Always','Heart','Matchmaker',
                     'by Spring','Prince', 'Princess', 'House','Ever After','Bride','First Dance'];
 let names=[];
+const fontFamilies = ["Lobster', cursive'","'Lobster Two', cursive","'Oleo Script', cursive","'Emilys Candy', cursive","'Galada', cursive","'Kotta One', serif","'Pacifico', cursive;","'Courgette', cursive",]
 class Story extends React.Component{
     constructor(props){
         super(props)
@@ -27,6 +28,9 @@ class Story extends React.Component{
         let second_word_number = Math.floor(Math.random() * 17);
         let first_word = title_one[first_word_number];
         let second_word = title_two[second_word_number];
+        let selected_font_number = Math.floor(Math.random() * 7);
+        console.log(fontFamilies[selected_font_number]);
+        document.getElementById("title_id").style.fontFamily = fontFamilies[selected_font_number];
         let the_title = first_word + ' ' + second_word;
         this.setState({ title: the_title });
 
@@ -87,7 +91,8 @@ class Story extends React.Component{
             let vague_number = Math.floor(Math.random() * all_cat[8].length);   
             let myth_number = Math.floor(Math.random() * all_cat[9].length);   
             let nationality_number = Math.floor(Math.random() * all_cat[10].length);      
-    
+            let ending_number= Math.floor(Math.random() * all_cat[11].length);
+            
             let names_array = [];
             let introduction = all_cat[0][introduction_number];
             let job = all_cat[1][job_number];
@@ -127,14 +132,16 @@ class Story extends React.Component{
                 else{
                 vague_a = 'a';
                 }
+            
             let myth_select = all_cat[9][myth_number];
             let nationality_select = all_cat[10][nationality_number];
+            let ending = all_cat[11][ending_number];
             names_array.push(vague_select + ' ' + nationality_select + ' ' + myth_select);
             console.log(names);        
             let story = [introduction + ', ' + female_name + ', '+ adj_select + ' '
              + job + ', ' + happening_select + ' but ' + but_select + '. Then she meets ' + male_name + 
              ', ' + adj_select_two + ' ' + job_two + '. ' + 'With the help of ' + vague_a + ' '
-             + vague_select + ' ' + nationality_select + ' ' + myth_select + ' , ' + female_name + ' finds love where she least expects it.' 
+             + vague_select + ' ' + nationality_select + ' ' + myth_select + ' , ' + female_name + ' ' + ending + '.' 
               ];
              this.setState({ story: (story[0]) });
              this.setState({ names: names_array });
@@ -152,7 +159,7 @@ again=()=>{
     render(){
     return(
         <section className='story_holder'> 
-        <p className='title'>{this.state.title}</p>       
+        <p className='title' id='title_id'>{this.state.title}</p>       
         <p className='story'>{this.state.story}</p>
         <Cast ref='cast' names={this.state.names}/>
         <button onClick={this.again} className='again_button'><img src='/images/again.png' className='again_image' />Again</button>

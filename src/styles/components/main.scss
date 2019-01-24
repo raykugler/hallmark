@@ -22,7 +22,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 4em;
     text-align: center;
-    color: #1c173e;
+    color: $color-five;
     margin-top: 65px;
     letter-spacing: -3;
 }
@@ -39,7 +39,7 @@
 .madlib_button{
     grid-column: 2/3;
     grid-row: 1/2;
-    background-color: #24711F; 
+    background-color: $color-four; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -54,7 +54,7 @@
 .auto_button{
     grid-column: 4/5;
     grid-row: 1/2;
-    background-color: #24711F;
+    background-color: $color-four;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -65,4 +65,58 @@
     height: 70px;
     width: 140px;
     justify-self: start;
+}
+@media only screen and (max-width: 1000px) and (min-width: 700px){
+    
+    .header{
+        font-family: 'Poppins', sans-serif;
+        font-size: 3.5em;
+        text-align: center;
+        color: #1c173e;
+        margin-top: 135px;
+        letter-spacing: -3;
+    }
+    .title {
+        font-family: 'Poppins',Arial, Helvetica, sans-serif;
+        grid-column: 1/-1;
+        justify-self: center;
+        font-size: 30px;
+        grid-row: 1/2;
+        margin-top: 30px;
+        font-style: italic;
+    }
+    .again_button{
+        margin-right: 50px;
+    }
+
+    
+  }
+  @media only screen and (max-width: 700px) {
+   .container{
+  
+    grid-template-rows: .4fr 1fr 1fr 1fr 1fr 1fr;
+    height: 1100px;
+   }  
+   .header{
+       font-size: 2.4em;
+       margin-top: 140px;
+   }
+   .auto_button{
+       grid-column: 1/-1;
+       grid-row: 1/2;
+       justify-self: center;
+   }
+   .madlib_button{
+       grid-column: 1/-1;
+       grid-row: 2/3;
+       justify-self: center;
+   }
+   .choice_buttons{
+        grid-column: 2/-2;
+        grid-row: 2/5;
+        margin-top: 110px;
+}
+.again_button{
+    margin-right: 50px;
+}
 }

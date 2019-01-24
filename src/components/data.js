@@ -2,7 +2,7 @@ import { isIterable } from "core-js";
 
 
 
-let intros = ['As Christmas approaches', 'After a divorce', "Frazzled and struggling with writer's block"];
+let intros = ['As Christmas approaches', 'After a divorce', "Frazzled and struggling with writer's block",'After getting fired from her job as a maid at a ritzy New York City hotel',];
 
 let profession = ['market researcher ','TV producer ','interim school superintendent ','music teacher', 'event planner', 'IT guy', 
                   'aspiring crafter ','big city new CEO ', 'Chicago-based business executive', 'professional retail designer', 'local music promoter',
@@ -30,8 +30,9 @@ let happening = ['is sent to a small town to organize a festival', 'is about to 
                 "travels to Memphis to secure one of the city's oldest family-owned banks",'takes a last-minute Christmas trip to her hometown of Evergreen',
                 "heads home to her late grandmother's home to spend Christmas",'is hired by the king of San Senova, Alexander, to help his daughter in a Christmas ice skating performance.',
                 "plans to demolish her great aunt's Gilded Age estate and replace it with a golf course", 'takes advice from the notes that are left by a mysterious "Handyman"',
-                'returns to her hometown to spend the summer with her daughter and mother',"she signs up for the town's annual barbecue competition",
-                'has suddenly lost the spark in her own marriage','is forced to fake a relationship to save her career']; 
+                'returns to her hometown to spend the summer with her daughter and mother',"signs up for the town's annual barbecue competition",
+                'has suddenly lost the spark in her own marriage','is forced to fake a relationship to save her career',"must halt her work on a big project in order to return home and assist her injured father at her family's tulip farm",
+            ]; 
  
 let buts = ['finds a billionaire in the process','she receives an urgent phone call from home and rushes back to help her Aunt recover from surgery', 'a meteor strikes the earth',
             'a transit strike ruins her plans', 'she discovers she has a long lost twin', 'a snowstorm strands her at the airport'
@@ -49,10 +50,40 @@ let nationality = ['Afghan','Albanian',	'Algerian','American', 'Andorran','Angol
 'Kazakh','Kenyan', 'Latvian','Lebanese','Lithuanian','Macedonian','Mexican','Moldovan',	'Moroccan','North Korean','Norwegian','Peruvian','Polish','Portuguese',
 'Puerto Rican', 'Romanian',	'Russian','Salvadorean','Samoan','Scottish','Slovak', 'Spanish','Swedish','Swiss','Thai','Ukrainian','Venezuelan','Vietnamese',
 'Welsh','Zimbabwean'];
-let all_cat = [intros, profession,female_names,male_names,adjectives, verbs, happening, buts,vague_words,mythical_creatures,nationality];
+
+let ends = ['Finds the meaning of Christmas along the way',"'s life begins to take some unexpected turns",'rediscovers the true meaning of Christmas',
+            "With nothing much in common, they both didn't expect to find the romance of a life time",'finds herself with unexpected career (and romantic) opportunities',
+            "finds there's only one problem for these two people who are supposed to hate each other: they start to fall in love",
+        "will discover how to channel the Christmas magic and speak her mind all on her own"];
+let all_cat = [intros, profession,female_names,male_names,adjectives, verbs, happening, buts,vague_words,mythical_creatures,nationality,ends];
 
 export default all_cat;
 
+// passions for cooking and ice sculpting are met with romance and Christmas spirit.
+
+// 
+
+// Holly's world is turned upside down when her niece's wish to Santa Claus comes true and she cannot tell a lie. As her career and love life go into disarray, she must learn to judge between the truth and what is right.
+
+
+
+// who helps Mackenzie x.
+
+// l,
+
+
+
+
+
+// Sparks fly at a wedding expo where Libby and Ben battle over clients
+
+// Mandy 
+
+
+
+// Sara 
+
+// a tempting new romance turns her life upside down.
 // {name one}, a {job},{has} but {but}. Then she {verb} {Name 2}, a {adjective} {job}. With the help of a {vaguely word} {nationality} {mythical creature}, {Name One} finds love where she least expects isIterable.
 // , an   but  of selling the estate she hoped to use as a venue. Before long, the unlikely pair begins falling for each other.
 
