@@ -39,7 +39,7 @@ let buts = ['finds a billionaire in the process','she receives an urgent phone c
             ]                
 let vague_words = ['vaguely', 'obscurely','indistinctly', 'darkly','remarkably','dimly', 'slightly', 'barely','impalpably','hazily']
 
-let mythical_creatures = ['fairy', 'angel', 'elf', 'imp','leprechaun','sprite', 'Santa', 'Santa-esque', 'ghost', 'spirit', 'grand mother','great aunt', 'grand father', 'former teacher', 'old track coach', 'former football coach'];
+let mythical_creatures = ['fairy', 'angel', 'elf', 'imp','leprechaun','sprite', 'Santa','ghost', 'spirit', 'grand mother','great aunt', 'grand father', 'former teacher', 'old track coach', 'former football coach'];
 
 let nationality = ['Afghan','Albanian',	'Algerian','American', 'Andorran','Angolan','Anguillan','Armenian',	'Australian','Austrian', 'Azerbaijani',
 'Bahamian',	'Bahraini',	'Bangladeshi',	'Barbadian', 'Belarusian','Belgian','Belizean','Beninese','Bermudian','Bhutanese', 'Bolivian','Botswanan',
