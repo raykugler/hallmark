@@ -51,7 +51,7 @@ let nationality = ['Afghan','Albanian',	'Algerian','American', 'Andorran','Angol
 'Puerto Rican', 'Romanian',	'Russian','Salvadorean','Samoan','Scottish','Slovak', 'Spanish','Swedish','Swiss','Thai','Ukrainian','Venezuelan','Vietnamese',
 'Welsh','Zimbabwean'];
 
-let ends = ['Finds the meaning of Christmas along the way',"'s life begins to take some unexpected turns",'rediscovers the true meaning of Christmas',
+let ends = ['finds the meaning of Christmas along the way',"'s life begins to take some unexpected turns",'rediscovers the true meaning of Christmas',
             "With nothing much in common, they both didn't expect to find the romance of a life time",'finds herself with unexpected career (and romantic) opportunities',
             "finds there's only one problem for these two people who are supposed to hate each other: they start to fall in love",
         "will discover how to channel the Christmas magic and speak her mind all on her own"];

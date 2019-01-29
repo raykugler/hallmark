@@ -1,5 +1,5 @@
 .container{
-    height: 800px;
+    height: 950px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -22,9 +22,10 @@
     font-family: 'Poppins', sans-serif;
     font-size: 4em;
     text-align: center;
-    color: $color-five;
+    color: $color-four;
     margin-top: 65px;
     letter-spacing: -3;
+    font-weight: 600;
 }
 
 .choice_buttons{
@@ -66,14 +67,24 @@
     width: 140px;
     justify-self: start;
 }
+.foot{
+    grid-column: 9/10;
+    grid-row: -3/-2;
+    text-align: right;
+    margin-bottom: 20px;
+    align-self: end;
+}
+.port_link{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
 @media only screen and (max-width: 1000px) and (min-width: 700px){
     
     .header{
         font-family: 'Poppins', sans-serif;
         font-size: 3.5em;
         text-align: center;
-        color: #1c173e;
-        margin-top: 135px;
+       
         letter-spacing: -3;
     }
     .title {
@@ -85,9 +96,18 @@
         margin-top: 30px;
         font-style: italic;
     }
-    .again_button{
-        margin-right: 50px;
+    .foot{
+        grid-column: -4/-2;
+        grid-row: -3/-2;
+        text-align: right;
+        margin-bottom: 20px;
+        align-self: end;
     }
+    .port_link{
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+    }
+
 
     
   }
@@ -98,8 +118,9 @@
     height: 1100px;
    }  
    .header{
-       font-size: 2.4em;
-       margin-top: 140px;
+       font-size: 1.6em;
+       margin-top: 38px;
+       
    }
    .auto_button{
        grid-column: 1/-1;
@@ -116,7 +137,14 @@
         grid-row: 2/5;
         margin-top: 110px;
 }
-.again_button{
-    margin-right: 50px;
+.foot{
+    grid-column: 1/-1;
+    grid-row: -2/-1;
+    text-align: center;
+    margin-top: 30px;
+}
+.port_link{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 }
 }

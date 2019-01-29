@@ -15,11 +15,14 @@ class Main extends React.Component{
 
 
 <header className='header_holder' >
-<h1 className='header'>Hallmark Movie Plot Generator</h1> 
+<h1 className='header'>Hallmark Movie Plot <br/> Generator</h1> 
 </header>
 </section>  
 
 <Landing />
+<footer className='foot'>
+<a href='https://raykugler.com/' className='port_link'>ray kugler</a>
+</footer>
 </section>
           
     );}

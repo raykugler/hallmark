@@ -13,13 +13,13 @@ class Madlib extends React.Component{
                }
     }   
     fill_choice=(e)=>{
-        console.log('hhh');
+      
 
         var after_select = e;
         this.setState({
             show: after_select
           });
-        console.log(this.state.landing + 'lllllll');
+      
        
     }
 fill_for_me=(e)=>{
@@ -76,15 +76,33 @@ else if(field_id === 'myth'){
        let form_array = [];
        let female = document.getElementById("female_name").value;
        let male = document.getElementById("male_name").value;
-       let adjOne = document.getElementById("adjective_one").value;
+
+       let adj_one_temp = document.getElementById("adjective_one").value
+       let adjOne = '';
+       if( adj_one_temp.charAt(0) === 'a' || adj_one_temp.charAt(0) === 'e' ||adj_one_temp.charAt(0) === 'i' ||adj_one_temp.charAt(0) === 'o' ||adj_one_temp.charAt(0) === 'u'){
+          adjOne = 'an ' + adj_one_temp;
+    }   else{
+        adjOne = 'a ' + adj_one_temp;
+    }
+       
+       
        let jobOne = document.getElementById("job_one").value;
-       let adjTwo = document.getElementById("adjective_two").value;
+    
+      let adj_two_temp = document.getElementById("adjective_two").value;
+      let adjTwo = '';
+      if( adj_two_temp.charAt(0) === 'a' || adj_two_temp.charAt(0) === 'e' ||adj_two_temp.charAt(0) === 'i' ||adj_two_temp.charAt(0) === 'o' ||adj_two_temp.charAt(0) === 'u'){
+         adjTwo = 'an ' + adj_two_temp;
+   }   else{
+       adjTwo = 'a ' + adj_two_temp;
+   }
+
+
        let jobTwo = document.getElementById("job_two").value;
        let natEth = document.getElementById("nation").value;
        let myth = document.getElementById("myth").value;
        form_array.push(female, male, adjOne, jobOne, adjTwo,jobTwo, natEth, myth);
        this.setState({story_fact_array: form_array});
-        console.log('blurg' + this.state.story_fact_array);
+     
         this.fill_choice('after_select');
         
     }

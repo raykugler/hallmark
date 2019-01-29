@@ -29,8 +29,7 @@ class Story extends React.Component{
         let first_word = title_one[first_word_number];
         let second_word = title_two[second_word_number];
         let selected_font_number = Math.floor(Math.random() * 7);
-        console.log(fontFamilies[selected_font_number]);
-        document.getElementById("title_id").style.fontFamily = fontFamilies[selected_font_number];
+       
         let the_title = first_word + ' ' + second_word;
         this.setState({ title: the_title });
 
@@ -38,14 +37,14 @@ class Story extends React.Component{
     story = () => {
         if(this.props.landing === 'madlib'){
 
-            console.log('fred' + this.props.show_fact_array);
+      
         let introduction_number = Math.floor(Math.random() * all_cat[0].length);
         let happening_number = Math.floor(Math.random() * all_cat[6].length);
         let but_number = Math.floor(Math.random() * all_cat[7].length);
         let vague_number = Math.floor(Math.random() * all_cat[8].length);  
         let verb_number = Math.floor(Math.random() * all_cat[5].length);  
-        
-       console.log(this.props.show_fact_array);
+        let ending_number= Math.floor(Math.random() * all_cat[11].length);
+      
         let names_array = [];
         let introduction = all_cat[0][introduction_number];
         let happening_select = all_cat[6][happening_number];
@@ -61,21 +60,22 @@ class Story extends React.Component{
         let job_two = this.props.story_fact_array[5];
         let nationality_select = this.props.story_fact_array[6];
         let myth_select = this.props.story_fact_array[7];
+        let ending = all_cat[11][ending_number];
         names_array.push(female_name); 
         names_array.push(male_name);
         names_array.push(vague_select + ' ' + nationality_select + ' ' + myth_select);
-        console.log(names);
+     
 
 
         
-        let story = [introduction + ', ' + female_name + ', a ' + adj_select + ' '
+        let story = [introduction + ', ' + female_name + ', ' + adj_select + ' '
          + job + ', ' + happening_select + ' but ' + but_select + '.  Then she meets ' + male_name + 
-         ', a ' + adj_select_two + ' ' + job_two + '. ' + 'With the help of a ' + ' ' 
-         + vague_select + ' ' + nationality_select + ' ' + myth_select + ' , ' + female_name + ' finds love where she least expects it.' 
+         ', ' + adj_select_two + ' ' + job_two + '. ' + 'With the help of ' + vague_select + ' ' 
+         + nationality_select + ' ' + myth_select + ' , ' + female_name + ' ' + ending +'.' 
           ];
          this.setState({ story: (story[0]) });
          this.setState({ names: names_array });
-         console.log('ppp ' + this.state.names);
+       
         }
          else if(this.props.landing === 'auto'){        
              let introduction_number = Math.floor(Math.random() * all_cat[0].length);
@@ -103,7 +103,7 @@ class Story extends React.Component{
             names_array.push(male_name);
             let adj_select = ''
             let tempAdj = all_cat[4][adj_number] 
-            console.log('vowel: ' + tempAdj)
+         
             if( tempAdj.charAt(0) === 'a' || tempAdj.charAt(0) === 'e' ||tempAdj.charAt(0) === 'i' ||tempAdj.charAt(0) === 'o' ||tempAdj.charAt(0) === 'u'){
               adj_select = 'an ' + tempAdj;
             }
@@ -113,7 +113,7 @@ class Story extends React.Component{
 
               let adj_select_two = '';
               let tempAdjTwo = all_cat[4][adj_number_two];
-              console.log('vowel: ' + tempAdjTwo)
+            
               if( tempAdjTwo.charAt(0) === 'a' || tempAdjTwo.charAt(0) === 'e' ||tempAdjTwo.charAt(0) === 'i' ||tempAdjTwo.charAt(0) === 'o' ||tempAdjTwo.charAt(0) === 'u'){
                 adj_select_two = 'an ' + tempAdjTwo;
               }
@@ -137,7 +137,7 @@ class Story extends React.Component{
             let nationality_select = all_cat[10][nationality_number];
             let ending = all_cat[11][ending_number];
             names_array.push(vague_select + ' ' + nationality_select + ' ' + myth_select);
-            console.log(names);        
+                
             let story = [introduction + ', ' + female_name + ', '+ adj_select + ' '
              + job + ', ' + happening_select + ' but ' + but_select + '. Then she meets ' + male_name + 
              ', ' + adj_select_two + ' ' + job_two + '. ' + 'With the help of ' + vague_a + ' '
@@ -145,7 +145,7 @@ class Story extends React.Component{
               ];
              this.setState({ story: (story[0]) });
              this.setState({ names: names_array });
-             console.log('ggg ' + this.state.names);
+           
 
          }
         
@@ -162,8 +162,10 @@ again=()=>{
         <p className='title' id='title_id'>{this.state.title}</p>       
         <p className='story'>{this.state.story}</p>
         <Cast ref='cast' names={this.state.names}/>
+        <section className='button_holder'>
         <button onClick={this.again} className='again_button'><img src='/images/again.png' className='again_image' />Again</button>
         <button onClick= {e =>this.props.choice('main')} className='back_button'><img src='/images/book_two.png' className='again_image' />Home</button>
+        </section>
         </section>
 
          
@@ -174,3 +176,6 @@ again=()=>{
     export default Story;
 
     // <button onClick={e => this.fill_call()} className='fill_button'>Fill Call</button>
+
+     // <button onClick={this.again} className='again_button'><img src='/images/again.png' className='again_image' />Again</button>
+        // <button onClick= {e =>this.props.choice('main')} className='back_button'><img src='/images/book_two.png' className='again_image' />Home</button>

@@ -10,15 +10,14 @@
     grid-row: 1/2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 200px 50px 200px ;
+    grid-template-rows: auto auto auto auto auto auto ;
 }
 .story{
     font-family: 'Poppins',Arial, Helvetica, sans-serif;
     grid-column: 2/-2;
-    grid-row: 1/2;
+    grid-row: 2/3;
     text-align: center;
     line-height: 25px;
-    margin-top: 100px;
 
 }
 .again_button {
@@ -30,7 +29,7 @@
     background: none;
     border: none;
     height: 70px;
-    width: 100px;
+    width: 80px;
 }
 
 
@@ -43,36 +42,47 @@
     background: none;
     border: none;
     height: 70px;
-    width: 100px;
+    width: 80px;
 }
 .again_image{
-    height: 50px;
-    width: 50px;
+    height: 38px;
+    width: auto;
 }
 .title{
-    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+    font-family: 'Charm',Arial, Helvetica, sans-serif;
     grid-column: 1/-1;
-    color: $color-two;
+    color: $color-five;
     justify-self: center;
     font-size: 50px;
     grid-row: 1/2;
-    margin-top: 0;
-    font-style: italic;
+    margin: 0;
     text-align: center;
+    font-style: italic;
 }
-
+.button_holder{
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    justify-self: center;
+}
 @media only screen and (max-width: 1000px) {
 .title{
-    font-size: 30px;
-    margin-top: 30px;
+    font-size: 48px;
+   
+}
+.story{
+    margin: 0;
+    grid-row: 2/3;
+}
+.story_holder{
+    grid-template-rows: auto auto auto auto auto auto;
 }
 .again_button{
     grid-column: 6/7;
     grid-row: 1/2;
-    height: 90px;
+    height: 50px;
     width: 61px;
     font-size: 13px;
-    font-family: poppins;
+
 }
 .again_image{
     height: 25px;
@@ -84,29 +94,40 @@
 .back_button{
     grid-column: 1/2;
     grid-row: 1/2;
-    height: 90px;
+    height: 50px;
     width: 61px;
     font-size: 13px;
-    font-family: poppins;
+
+}
+.button_holder{
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    justify-self: center;
+    margin-top: 11px;
 }
 }
 
 @media only screen and (max-width: 700px) {
-    .story_holder{
-        grid-column: 1/-1;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 20px 1fr 1fr 1fr 1fr 20px;
+      .story_holder{
+            grid-template-rows: auto auto auto 1fr 1fr 1fr;
+            grid-row: 1/2;
+            grid-template-columns: 20px 1fr 1fr 1fr 1fr 20px;
         
     }
     .story{
-        grid-row: 1/2;
-        margin-top: 125px;
+        grid-row: 2/3;
+        margin-top: 0;
+        align-self: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 1.4rem;
     }
     .title{
-        font-size: 20px;
-        margin-top: 80px;
+        font-size: 33px;
         text-align: center;
         grid-column: 2/-2;
+        margin-top: 10px;
+        margin-bottom: 15px;
     }
     .form{
         grid-column: 1/-1;
@@ -115,7 +136,10 @@
         grid-template-columns:20px 1fr 1fr 1fr 20px;
          grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
-    .back_button{
-        margin-left: 50px;
+    
+    .button_holder{
+        grid-column: 1/-1;
+        grid-row: 3/4;
+        justify-self: center;
     }
 }

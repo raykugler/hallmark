@@ -8,23 +8,6 @@ class The_Form extends React.Component{
     }   
 
 
-//    make_story=(event)=>{
-       
-//        let form_array = [];
-//        let female = document.getElementById("female_name").value;
-//        let male = document.getElementById("male_name").value;
-//        let adjOne = document.getElementById("adjective_one").value;
-//        let jobOne = document.getElementById("job_one").value;
-//        let adjTwo = document.getElementById("adjective_two").value;
-//        let jobTwo = document.getElementById("job_two").value;
-//        let natEth = document.getElementById("nation").value;
-//        let myth = document.getElementById("myth").value;
-//        form_array.push(female, male, adjOne, jobOne, adjTwo,jobTwo, natEth, myth);
-//         this.setState({'story_fact_array': form_array});
-//         console.log(this.state.story_fact_array);
-//         console.log(form_array);
-//         this.props.fill_choice('after_select');
-//     }
 
     render(){
     return(
@@ -44,7 +27,7 @@ class The_Form extends React.Component{
 
     <label className='inputs'>
         <p className='input_title'>Adjective:</p>
-        <input type="text" name="adj_one" id='adjective_one' className='field' value=''/>
+        <input type="text" name="adj_one" id='adjective_one' className='field' />
         <img src='/images/again.png' className='autofill_image' onClick={e => this.props.fill_for_me('adjective_one')}/>
     </label>
 

@@ -12,13 +12,12 @@ class Landing extends React.Component{
   }
     }
     choice=(e)=>{
-        console.log('hhh');
-
+       
         var the_choice = e;
         this.setState({
             landing: the_choice
           });
-        console.log(this.state.landing + 'lllllll');
+       
        
     }
 

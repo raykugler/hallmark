@@ -31,7 +31,7 @@ class Cast extends React.Component{
     }   
 componentDidMount(){
     this.fill_call();
-    console.log(angel_image_array.length)
+
 }
 async fill_call()  {
     let actress_select = Math.floor(Math.random() * 41);
@@ -53,7 +53,7 @@ async fill_call()  {
     const fetchActorResult = await fetch(URL_two);
     const actorResponse = await fetchActorResult;
     const actorjsonData = await actorResponse.json();
-    console.log(actorjsonData);
+    
     this.setState({ actor_image: actorjsonData[0].person.image.medium  });
     this.setState({ actor_name: actorjsonData[0].person.name });
 
@@ -62,10 +62,10 @@ async fill_call()  {
     const fetchAngelResult = await fetch(URL_three);
     const angelResponse = await fetchAngelResult;
     const angeljsonData = await angelResponse.json();
-    console.log(actor);
+    
     this.setState({ angel_image: angeljsonData[0].person.image.medium  });
     this.setState({ angel_name: angeljsonData[0].person.name});
-       console.log(this.props.names);
+       
     
 }
 async image_test(){
@@ -90,15 +90,19 @@ async image_test(){
 
     render(){
     return(
-        <section className='actor_holder' id='display'>        
+        <section className='actor_holder' id='display'>
+        <section className='actress_holder holder'>        
         <img src={this.state.actress_image} className='actress_image image'/>
         <p className='actress_name cast'>{this.state.actress_name} <br/> as <br/> {this.props.names[0]}  </p>
-        
-
+        </section>
+        <section className='actor_man_holder holder'> 
         <img src={this.state.actor_image} className='actor_image image'/>
         <p className='actor_name cast'>{this.state.actor_name}<br/> as <br/> {this.props.names[1]}</p>
+        </section>
+        <section className='angel_holder holder'> 
         <img src={this.state.angel_image} className='angel_image image'/>
         <p className='angel_name cast'>{this.state.angel_name} <br/> as <br/> {this.props.names[2]}</p>
+        </section>
         </section>
 
          
