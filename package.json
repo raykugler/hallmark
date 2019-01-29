@@ -1,6 +1,9 @@
 {
-  "name": "indecision-app",
+  "name": "Hallmark Movie Plot Generator",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.6.0"
+  },
   "main": "index.js",
   "author": "Ray",
   "license": "MIT",
