@@ -28,7 +28,6 @@
     "enzyme": "2.9.1",
     "enzyme-to-json": "1.5.1",
     "express": "4.15.4",
-    "extract-text-plus-webpack-plugin": "3.0.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "jest": "24.0.0",
     "live-server": "^1.2.0",
