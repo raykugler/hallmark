@@ -40,7 +40,7 @@ async fill_call()  {
     let actor = actor_image_array[actor_select];
     let angel_select = Math.floor(Math.random() * 21);
     let angel = angel_image_array[angel_select];
-    const URL = `http://api.tvmaze.com/search/people?q=${actress}`;
+    const URL = `https://api.tvmaze.com/search/people?q=${actress}`;
     
     const fetchActressResult = fetch(URL);
     const actressResponse = await fetchActressResult;
@@ -48,7 +48,7 @@ async fill_call()  {
 
     this.setState({ actress_image: actressjsonData[0].person.image.medium  });
     this.setState({ actress_name: actressjsonData[0].person.name  });
-    const URL_two = `http://api.tvmaze.com/search/people?q=${actor}`;
+    const URL_two = `https://api.tvmaze.com/search/people?q=${actor}`;
 
     const fetchActorResult = await fetch(URL_two);
     const actorResponse = await fetchActorResult;
@@ -57,7 +57,7 @@ async fill_call()  {
     this.setState({ actor_image: actorjsonData[0].person.image.medium  });
     this.setState({ actor_name: actorjsonData[0].person.name });
 
-    const URL_three = `http://api.tvmaze.com/search/people?q=${angel}`;
+    const URL_three = `https://api.tvmaze.com/search/people?q=${angel}`;
 
     const fetchAngelResult = await fetch(URL_three);
     const angelResponse = await fetchAngelResult;
@@ -72,7 +72,7 @@ async image_test(){
     let display = document.getElementById('display');
      for (let i = 0; i< test_array.length; i++){
         let this_image = test_array[i];
-        const URL_three = `http://api.tvmaze.com/search/people?q=${this_image}`;
+        const URL_three = `https://api.tvmaze.com/search/people?q=${this_image}`;
         let image_frame = document.createElement('IMG');
         let text_frame = document.createElement('P');
         
